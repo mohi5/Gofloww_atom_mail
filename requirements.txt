@@ -1,0 +1,8 @@
+google-generativeai
+langchain
+langchain-google-genai
+python-dotenv
+fastapi
+uvicorn
+slowapi
+pydantic
