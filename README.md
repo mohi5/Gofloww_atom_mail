@@ -73,5 +73,5 @@ This is a **live prototype in evolution** — open to contributors, feedback, an
 
 ## 📜 License
 
-MIT License — See [LICENSE](LICENSE)
+MIT License — See [LICENSE](LICENSE) 
 
