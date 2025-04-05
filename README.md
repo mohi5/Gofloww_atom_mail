@@ -1,5 +1,5 @@
 
-# 📬 AI Email Assistant — GoFloww Atom Mail (Prototype)
+# 📬 AI Email Assistant — GoFloww Atom Mail (Prototype) 
 
 ## 🧠 Overview
 
