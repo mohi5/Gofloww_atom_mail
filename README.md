@@ -3,7 +3,7 @@
 
 ## 🧠 Overview
 
-The **AI Email Assistant** is a lightweight prototype designed to **simulate real-time email workflows** with **AI-generated smart replies** and **summarized insights**, powered by **Google's Gemini API**.
+The **AI Email Assistant** is a lightweight prototype designed to **simulate real-time email workflows** with **AI-generated smart replies** and **summarized insights**, powered by **Google's Gemini API**. 
 
 It demonstrates how an intelligent email agent can:
 - Mimic incoming mail using contextual keywords
