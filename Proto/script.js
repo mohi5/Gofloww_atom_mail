@@ -1,6 +1,6 @@
 const API_BASE = "http://localhost:3000";
 let selectedEmail = null;
-
+//kya matlab management kharab hai
 // 🔁 Load emails on page load
 window.onload = () => {
   fetchEmails();
