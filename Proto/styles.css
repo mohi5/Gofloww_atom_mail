@@ -1,0 +1,224 @@
+/* 🌐 Base Setup */
+:root {
+    --bg: rgba(255, 255, 255, 0.1);
+    --blur: 20px;
+    --glass-color: rgba(255, 255, 255, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --text-color: #fff;
+    --accent: #5ac8fa;
+    --font: 'Segoe UI', sans-serif;
+    --shadow: rgba(0, 0, 0, 0.2);
+  
+    /* Light Theme Overrides */
+    --bg-light: #f4f6f8;
+    --text-light: #333;
+    --glass-color-light: rgba(255, 255, 255, 0.75);
+  }
+  
+  [data-theme='light'] {
+    --bg: var(--bg-light);
+    --glass-color: var(--glass-color-light);
+    --text-color: var(--text-light);
+    --shadow: rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a52);
+    color: var(--text-color);
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
+    min-height: 100vh;
+  }
+  
+  /* 🌟 Utility Classes */
+  .glass {
+    background: var(--glass-color);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    backdrop-filter: blur(var(--blur));
+    box-shadow: 0 8px 32px var(--shadow);
+    padding: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* 🧠 Header */
+  .app-header {
+    text-align: center;
+  }
+  
+  .app-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .tagline {
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+  
+  /* 🔄 Layout Grid */
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+  
+  .sidebar, .main-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .sidebar {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  
+  .sidebar h2 {
+    font-size: 1.3rem;
+  }
+  
+  .emails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .email-item {
+    padding: 0.75rem;
+    background: var(--glass-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .email-item:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.35);
+  }
+  
+  /* 📖 Email Viewer */
+  .email-viewer, .reply-box {
+    gap: 1rem;
+  }
+  
+  .email-content {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    background: var(--glass-color);
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  
+  /* ✍️ Reply Area */
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 12px;
+    border: none;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+  }
+  
+  textarea::placeholder {
+    color: #bbb;
+  }
+  
+  .customization-panel summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .customization-controls {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  
+  .customization-controls label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+  }
+  
+  /* 🔘 Buttons */
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  button {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--accent);
+    color: #fff;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #007aff;
+  }
+  
+  .status-message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+  
+  /* 🦶 Footer */
+  .footer {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+
+  .email-card.selected {
+    border: 2px solid #2196f3;
+    background-color: #e3f2fd;
+}
+[data-theme="dark"] .email-card.selected {
+    border: 2px solid #90caf9;
+    background-color: #1e3a5f;
+}
+
+  .email-select {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.email-checkbox {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+  
+  /* 🔄 Responsive */
+  @media (max-width: 768px) {
+    .main-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

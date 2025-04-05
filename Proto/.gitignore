@@ -1,0 +1,55 @@
+# Node modules
+node_modules/
+.env
+.env.*   # If you're using dotenv or env files
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Build output
+dist/
+build/
+.out/
+.next/
+
+# VSCode and IDEs
+.vscode/
+.idea/
+*.sw?
+
+# OS/system files
+.DS_Store
+Thumbs.db
+
+# Cache and temp
+.cache/
+.temp/
+*.tmp
+
+# Local config files
+*.local
+*.bak
+*.swp
+
+# Git backups
+*.orig
+
+# Optional Gemini API keys (if any)
+gemini-key.txt
+secrets.json
+
+# Coverage / testing
+coverage/
+*.lcov
+
+# React/Vite stuff
+public/
+*.map
