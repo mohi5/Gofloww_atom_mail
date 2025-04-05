@@ -4,7 +4,7 @@ let selectedEmail = null;
 // 🔁 Load emails on page load
 window.onload = () => {
   fetchEmails();
-};
+};  ///lol
 
 // 📥 Fetch and display inbox emails
 async function fetchEmails() {
