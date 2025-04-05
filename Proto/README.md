@@ -97,7 +97,7 @@ Just open `index.html` in your browser directly (no server needed).
 ---
 
 ### ⚙️ Customization Options
-
+ 
 You can control the following options via the UI dropdowns:
 
 - **Tone:** Neutral, Formal, Friendly
