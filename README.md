@@ -1,108 +1,77 @@
-# AI Email Assistant
 
-## **Project Description**
-This AI-powered email assistant fetches emails from Gmail, processes them using Google's **Gemini API**, and generates smart replies. It helps users save time by automating responses while ensuring privacy and efficiency.
+# 📬 AI Email Assistant — GoFloww Atom Mail (Prototype)
 
----
+## 🧠 Overview
 
-## **Problem Statement**
-Managing emails manually can be time-consuming and inefficient. The need to draft context-aware replies for frequent emails increases workload and response time. This project aims to solve these problems by:
+The **AI Email Assistant** is a lightweight prototype designed to **simulate real-time email workflows** with **AI-generated smart replies** and **summarized insights**, powered by **Google's Gemini API**.
 
-- **Automatically fetching emails** from Gmail.
-- **Generating AI-based smart replies** using Gemini API.
-- **Enhancing efficiency & reducing response time** with automation.
-- **Ensuring privacy & security** by storing emails locally in SQLite.
+It demonstrates how an intelligent email agent can:
+- Mimic incoming mail using contextual keywords
+- Summarize emails instantly
+- Generate AI-crafted replies based on user-defined **tone**, **intent**, and **personality**
 
----
-
-## **How It Works (Step-by-Step)**
-
-1. **User grants OAuth 2.0 permission** to access their Gmail inbox securely.
-2. **Flask backend fetches unread emails** using the Gmail API.
-3. **AI processes email content** and generates context-aware replies via Gemini API.
-4. **Replies are stored in a local database (SQLite)** for future reference.
-5. **User reviews and sends AI-generated replies** directly from the assistant.
+No Gmail integration yet — this is a **controlled prototype** to test AI features in isolation before integrating into full production systems like Atom Mail.
 
 ---
 
-## **Tech Stack**
-- **Backend**: Python (Flask), Gmail API, Gemini API
-- **Database**: SQLite (local storage for emails & responses)
-- **AI Model**: Gemini Pro API (Free)
-- **Authentication**: OAuth 2.0 (for Gmail access)
-- **Frontend (Optional)**: React (if UI is needed)
+## ⚙️ Key Highlights
+
+- 💡 **Simulated Email Feed:** Generate mock emails based on prompts or keywords
+- ✂️ **Summarization Engine:** Extracts intent & essence from lengthy emails
+- ✍️ **AI Reply Generator:** Writes contextual replies with adjustable parameters
+- 🎯 **Tone Personalization:** Reply in neutral, formal, friendly, or witty styles
+- 🖼️ **Frontend Only Mode:** UI runs without a server — open in any browser
+- 🌐 **Light Backend:** Local Node.js server handles mail simulation and routing
+- 🔐 **Environment-based API Key Setup** for free Gemini API
 
 ---
 
-## **Installation & Setup**
+## 📦 Tech Snapshot
 
-### **1. Clone the Repository**
-```bash
-git clone https://github.com/mohi5/Goflow_atom_mail.git
-cd Goflow_atom_mail
-```
-
-### **2. Install Dependencies**
-```bash
-pip install flask requests google-auth google-auth-oauthlib google-auth-httplib2
-```
-
-### **3. Setup Google OAuth for Gmail API**
-- Visit **Google Cloud Console** and enable the Gmail API.
-- Download the **credentials.json** file and place it in the project folder.
-
-### **4. Run the Flask Server**
-```bash
-python app.py
-```
+- **Frontend:** HTML + CSS + JavaScript (Vanilla)
+- **Backend:** Node.js + Express (email simulation, Gemini API routing)
+- **AI Engine:** Gemini Pro (free-tier via API key)
+- **No Database Yet:** In-memory mail store for simplicity
 
 ---
 
-## **API Endpoints & Usage**
+## 🚧 Why This Prototype?
 
-### **1. Fetch Emails**
-**Endpoint:** `GET /fetch-emails`
-- Fetches latest unread emails from Gmail.
-- Returns a JSON list with sender, subject, and body.
+> Building AI-first email agents requires **robust testing grounds** before integrating with live systems like Gmail.  
+This prototype lays the foundation for:
 
-```json
-[
-  {
-    "sender": "example@gmail.com",
-    "subject": "Meeting Reminder",
-    "body": "Don't forget our meeting at 3 PM."
-  }
-]
-```
-
-### **2. Generate AI Response**
-**Endpoint:** `POST /generate-response`
-- Sends an email body to Gemini API for response generation.
-- Returns an AI-generated reply.
-
-#### **Request Body:**
-```json
-{
-  "body": "Can we reschedule the meeting?"
-}
-```
-
-#### **Response:**
-```json
-{
-  "response": "Sure! What time works best for you?"
-}
-```
+- 🧪 Testing LLM accuracy in real-world-like scenarios  
+- 🧠 Fine-tuning prompt engineering and reply customization  
+- 🔁 Simulating continuous feedback loops (receive ➜ summarize ➜ reply)
 
 ---
 
-## **How to Extend the Project**
-- **Auto-send replies** after AI generation.
-- **Integrate a UI** with React for better email management.
-- **Add priority detection** to categorize emails.
-- **Use Llama 3 for local AI processing** (instead of external APIs).
+## 🚀 Future Vision
+
+This is just the start. The full product aims to:
+- Connect to **real inboxes** (OAuth-based Gmail integration)
+- Add **real-time notifications**
+- Support **offline/local LLMs** (LLaMA 3, Mistral via Ollama)
+- Offer **task extraction**, **sentiment tagging**, and **priority ranking**
+- Provide a beautiful, responsive **React frontend** (already planned 🎨)
 
 ---
 
-## **Conclusion**
-This project is a privacy-focused, open-source AI assistant that automates email replies efficiently. It integrates seamlessly with Gmail and ensures fast, context-aware responses using **free AI tools**. 🚀
+## 🛠️ Wanna see Prototype?
+Preview Prototype: [CLick](Proto/README.md)
+
+
+## 💬 Feedback & Contributions
+
+This is a **live prototype in evolution** — open to contributors, feedback, and collaborators.
+
+- 🔧 Fork it, build it, break it.
+- 💬 Raise issues for UX, logic, or AI behavior.
+- 🧠 Suggest better prompt strategies or models.
+
+---
+
+## 📜 License
+
+MIT License — See [LICENSE](LICENSE)
+
