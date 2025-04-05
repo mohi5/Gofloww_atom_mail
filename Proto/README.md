@@ -1,5 +1,3 @@
-
-
 # ✅ Prototype for Gofloww Atom Mail Challenge
 
 ```markdown
@@ -132,7 +130,11 @@ You can control the following options via the UI dropdowns:
 
 ---
 
+## Pptx for our prototype
 
+[CLick to preview](https://docs.google.com/presentation/d/1Gs5VMMl0CRaIVYeOtCJMyWOn7YeA2xot/edit?usp=sharing&ouid=107993922139507169933&rtpof=true&sd=true)
+
+---
 
 ### 🧑‍💻 Author
 
