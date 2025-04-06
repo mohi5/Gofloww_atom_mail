@@ -18,7 +18,7 @@ app.use(helmet());
 
 // 🔑 DEEPSEEK API Setup
 const API_KEY = process.env.API_KEY;
-const DEEPSEEK_URL = "https://api.deepseek.com/v1";
+// const DEEPSEEK_URL = "https://api.deepseek.com/v1";
 
 const EMAILS_PATH = path.join(process.cwd(), 'emails.json');
 let mails = [];
@@ -87,61 +87,53 @@ export async function callDeepSeek(prompt) {
 
 // 📩 /sum – Summarize Email
 app.post("/sum", async (req, res) => {
-  const { email, intent = "quick summary", tone = "neutral", length = "short", recipient = "user" } = req.body;
-  const body = email?.body || "";
+    const { email, intent = "summarize professionally", tone = "neutral", length = "short", recipient = "user" } = req.body;
+    const body = email?.body || "";
+  
+    if (!email || !body) {
+      return res.status(400).json({ error: "Missing email body" });
+    }
+  
+    const prompt = `
+  You are a professional AI assistant trained to summarize business and personal emails.
+  
+  📨 Email Content:
+  """ 
+  ${body}
+  """
+  
+  📌 Summary Instructions:
+  - Write a concise and informative summary in ${length} length and a ${tone} tone.
+  - Intended recipient: ${recipient}
+  - Intent: ${intent}
+  
+  ✏️ Formatting Guidelines:
+  - Use bullet points for clarity **only if multiple ideas exist**.
+  - Keep the summary factual — do not assume or invent details.
+  - Do NOT add commentary, opinions, or sign-offs.
+  
+  Return only the summary content. Nothing more.
+  `;
+  
+    try {
+      const summary = await callDeepSeek(prompt);
+  
+      if (!summary) {
+        throw new Error("Empty or invalid summary received from model.");
+      }
+  
+      console.log("🧠 Raw summary response:", summary);
+      const cleanSummary = summary.replace(/^\\boxed{/, "").replace(/}$/, "").trim();
+      res.json({ summary: cleanSummary });
 
-  if (!email || !body) {
-    return res.status(400).json({ error: "Missing email body" });
-  }
+    } catch (err) {
+      console.error("❌ Summary error:", err.message || err);
+      res.status(500).json({ error: "Failed to summarize email" });
+    }
+  });
+  
 
-  const prompt = `
-You are a highly intelligent AI assistant that summarizes professional emails.
-Your goal is to generate a clear, concise, and useful summary of the following email:
 
----
-✉️ Email Content:
-${body}
----
-
-📋 Instructions:
-- Tone: ${tone}
-- Length: ${length}
-- Audience: ${recipient}
-- Style: Clear, bullet-point (if needed), avoid fluff
-- Avoid: Adding fake info or assumptions
-
-Return only the summary, no extra commentary.
-`;
-
-  try {
-    const summary = await callDeepSeek(prompt);
-    res.json({ summary });
-  } catch (err) {
-    res.status(500).json({ error: "Failed to summarize email" });
-  }
-});
-
-// 📨 /gen – Generate AI Reply
-app.post("/gen", async (req, res) => {
-  const {
-    email = "", sender = "unknown",
-    intent = "respond politely", tone = "formal",
-    length = "medium", recipient = "sender"
-  } = req.body;
-
-  if (!email || typeof email !== 'string') {
-    return res.status(400).json({ error: "Invalid email" });
-  }
-
-  const prompt = `You are an AI assistant. Read the following email:\n"${email}"\n\nGenerate a reply with a ${tone} tone and ${length} length. Make it relevant to the context and directed to ${recipient}. Don't fabricate facts.`;
-
-  try {
-    const aiReply = await callDeepSeek(prompt);
-    res.json({ reply: aiReply });
-  } catch (err) {
-    res.status(500).json({ error: "Failed to generate reply" });
-  }
-});
 
 // 💬 /reply – Custom Email Writer
 app.post("/reply", async (req, res) => {
@@ -152,14 +144,35 @@ app.post("/reply", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const prompt = `Compose a ${length}-length email in a ${tone} tone with a ${personality} personality, intended for ${recipient}, about:\n"${intent}".\nDon't add greetings or sign-offs unless appropriate. Only return the body.`;
-
-    const result = await callDeepSeek(prompt);
+    const prompt = `
+    You are an expert email assistant writing on behalf of a busy professional.
+    
+    ✍️ Task:
+    Compose an email based on the following inputs.
+    
+    🧾 Details:
+    - Length: ${length}
+    - Tone: ${tone}
+    - Personality Style: ${personality}
+    - Recipient: ${recipient}
+    - Core Intent/Topic: "${intent}"
+    
+    📌 Instructions:
+    - Write the full email — include greetings and sign-offs like they are absolutely necessary.
+    - Ensure the content flows naturally and remains relevant to the intent.
+    - Avoid fluff, clichés, or made-up facts.
+    - Reflect the chosen tone and personality in language choice and structure.
+    
+    Generate the full mail. Be precise, professional, and human-like.
+    `;
+    
+    const reply = await callDeepSeek(prompt);
+    console.log(reply);
 
     res.json({
-      email: result.trim(),
+      email: reply.trim(),
       meta: { intent, tone, length, recipient, personality },
-      model: "deepseek-chat",
+      model: "deepseek/deepseek-r1-zero:free",
       time: new Date().toISOString()
     });
   } catch (err) {
@@ -175,7 +188,7 @@ app.post('/add', (req, res) => {
   }
 
   newEmail.id = Date.now();
-  newEmail.timestamp = new Date().toISOString();
+  newEmail.timestamp = new Date().toLocaleString();
   mails.unshift(newEmail);
   saveEmails();
   res.json({ success: true, email: newEmail });
