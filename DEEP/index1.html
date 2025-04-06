@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Assistant</title>
+    <link rel="stylesheet" href="styles1.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Smart AI Email Assistant with real-time reply generation." />
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- 🧠 Header -->
+        <header class="app-header" role="banner">
+            <h1>Email Assistant 📧</h1>
+            <p class="tagline">Smart replies, simplified.</p>
+        </header>
+
+        <!-- 🔄 Main Layout -->
+        <main class="main-grid" role="main">
+
+            <!-- 📥 Sidebar: Inbox -->
+            <aside class="sidebar" aria-labelledby="inbox-heading">
+                <h2 id="inbox-heading">Inbox</h2>
+                <div id="emails" class="emails" role="list" aria-live="polite">
+                    <p class="placeholder">Loading emails...</p>
+                </div>
+            </aside>
+
+            <!-- 📖 Email Display and AI Reply Section -->
+            <section class="main-panel" aria-label="Email Details and Reply">
+
+                <!-- 📧 Email Viewer -->
+                <article class="email-viewer">
+                    <h2>Selected Email</h2>
+                    <div id="emailContent" class="email-content">
+                        <p>Select an email to view its contents.</p>
+                    </div>
+                </article>
+
+                <!-- ✍️ AI Reply Box -->
+                <section class="reply-box" aria-label="AI Reply Composer">
+                    <h2>Compose Smart Reply</h2>
+
+                    <textarea id="replyInput" placeholder="Type or let AI generate your reply..." rows="4"></textarea>
+
+                    <!-- ⚙️ Customization Panel -->
+                    <details class="customization-panel">
+                        <summary>⚙️ Customize Reply</summary>
+                        <div class="customization-controls">
+                            <label for="tone">Tone:
+                                <select id="tone" name="tone">
+                                    <option value="neutral">Neutral</option>
+                                    <option value="friendly">Friendly</option>
+                                    <option value="formal">Formal</option>
+                                    <option value="apologetic">Apologetic</option>
+                                </select>
+                            </label>
+
+                            <label for="personality">Personality:
+                                <select id="personality" name="personality">
+                                    <option value="professional">Professional</option>
+                                    <option value="humorous">Humorous</option>
+                                    <option value="direct">Direct</option>
+                                </select>
+                            </label>
+
+                            <label for="length">Length:
+                                <select id="length" name="length">
+                                    <option value="short">Short</option>
+                                    <option value="medium" selected>Medium</option>
+                                    <option value="detailed">Detailed</option>
+                                </select>
+                            </label>
+
+                            <label for="intent">Intent:
+                                <input type="text" id="intent" placeholder="e.g. Apologize, Clarify, Confirm" />
+                            </label>
+
+                            <!-- Hidden recipient field (used by JS) -->
+                            <input type="hidden" id="recipient" value="Recipient" />
+                        </div>
+                    </details>
+
+                    <!-- 🚀 Action Buttons -->
+                    <div class="action-buttons">
+                        <button id="generateBtn" type="button" onclick="generateReply()">🧠 Generate</button>
+                        <button id="summaryBtn" type="button" onclick="summary()">🧠 Summary</button>
+                        <button id="sendBtn" type="button" onclick="sendReply()">📤 Send</button>
+                    </div>
+
+                    <!-- 🔄 Status Message -->
+                    <div id="statusMessage" class="status-message" role="status" aria-live="polite"></div>
+                </section>
+            </section>
+        </main>
+
+        <!-- 🦶 Footer -->
+        <footer class="footer" role="contentinfo">
+            <p>&copy; 2025 Email Assistant • Powered by BinaryBrains ✨</p>
+        </footer>
+    </div>
+
+    <script src="script1.js" defer></script>
+</body>
+
+</html>

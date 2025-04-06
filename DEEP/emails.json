@@ -1,0 +1,214 @@
+[
+  {
+    "id": "email-1",
+    "subject": "📢 Marketing Campaign Analysis – What Worked & What Didn't",
+    "from": "Shea.Barrows34@yahoo.com",
+    "to": "Nina.Bosco15@yahoo.com",
+    "cc": "Cristopher_Altenwerth38@yahoo.com",
+    "bcc": "Nedra_Johnston59@gmail.com",
+    "date": "4/6/2025, 8:24:12 AM",
+    "body": "Hey Security Team,\n\nThe results from our third-party audit just came in — and there are critical vulnerabilities:\n🔴 High – JWT tokens not rotating as expected after auth expiry\n🟡 Medium – Access logs not being archived past 14 days\n🔵 Low – CSP header misconfigurations on internal tools\n\nWe need immediate resolution before our next ISO re-certification. Assign owners, patch production by April 6, and send sign-off report by April 7.\n\nAlso, update documentation to reflect all changes post-patch. The auditors were particularly focused on traceability and logging practices.\n\nThanks,  \nCISO",
+    "priority": "high",
+    "read": true,
+    "starred": true,
+    "attachments": [],
+    "threadId": "thread-14",
+    "tags": [
+      "marketing",
+      "launch"
+    ]
+  },
+  {
+    "id": "email-2",
+    "subject": "💼 HR Policy Update – Hybrid Work Guidelines Effective May",
+    "from": "Brook_Ryan@gmail.com",
+    "to": "Emelia.Cummings@yahoo.com",
+    "cc": "Anissa_Hauck62@gmail.com",
+    "bcc": "Chyna.Adams@gmail.com",
+    "date": "4/5/2025, 11:44:00 PM",
+    "body": "Hey Security Team,\n\nThe results from our third-party audit just came in — and there are critical vulnerabilities:\n🔴 High – JWT tokens not rotating as expected after auth expiry\n🟡 Medium – Access logs not being archived past 14 days\n🔵 Low – CSP header misconfigurations on internal tools\n\nWe need immediate resolution before our next ISO re-certification. Assign owners, patch production by April 6, and send sign-off report by April 7.\n\nAlso, update documentation to reflect all changes post-patch. The auditors were particularly focused on traceability and logging practices.\n\nThanks,  \nCISO",
+    "priority": "high",
+    "read": true,
+    "starred": true,
+    "attachments": [],
+    "threadId": "thread-6",
+    "tags": [
+      "data",
+      "support",
+      "product",
+      "infra",
+      "launch"
+    ]
+  },
+  {
+    "id": "email-3",
+    "subject": "💰 Investor Relations – Board Meeting Preparation Notes",
+    "from": "Alexandra18@hotmail.com",
+    "to": "Devante.Osinski-Ankunding@yahoo.com",
+    "cc": "Tyrese.Rutherford23@gmail.com",
+    "bcc": "Olin_Tremblay-Prosacco@yahoo.com",
+    "date": "4/5/2025, 8:36:15 PM",
+    "body": "Hello Leadership Team,\n\nThe Q1 BI report reveals key trends across verticals. Notably:\n- 28% MoM growth in user retention, mainly due to the new reply-suggestion engine.\n- Drop in mobile engagement in Asia-Pacific (−12%) likely caused by region-specific UX issues.\n\nAttached, you’ll find:\n📁 insights-q1-report.pdf (Full BI snapshot)\n📁 regression-analysis.xlsx (Filtered by geography & platform)\n\nAction Items:\n- UX team to investigate APAC feedback\n- Sales to adjust forecasts for next quarter\n- Product to schedule roadmap check-in with UX & Dev by mid-month\n\nPlease review ahead of the leadership sync on Thursday.\n\nBest regards,  \nHead of Strategy",
+    "priority": "high",
+    "read": true,
+    "starred": true,
+    "attachments": [
+      "launch-checklist.pdf"
+    ],
+    "threadId": "thread-9",
+    "tags": [
+      "support",
+      "HR",
+      "strategy",
+      "urgent"
+    ]
+  },
+  {
+    "id": "email-4",
+    "subject": "🚀 Product Launch Readiness: Final Checklist & Dependencies",
+    "from": "Dallin.Schamberger@hotmail.com",
+    "to": "Jamey_OConner85@yahoo.com",
+    "cc": "Jackson40@gmail.com",
+    "bcc": "Melvin_Wolf@hotmail.com",
+    "date": "4/6/2025, 8:20:46 AM",
+    "body": "Hey Security Team,\n\nThe results from our third-party audit just came in — and there are critical vulnerabilities:\n🔴 High – JWT tokens not rotating as expected after auth expiry\n🟡 Medium – Access logs not being archived past 14 days\n🔵 Low – CSP header misconfigurations on internal tools\n\nWe need immediate resolution before our next ISO re-certification. Assign owners, patch production by April 6, and send sign-off report by April 7.\n\nAlso, update documentation to reflect all changes post-patch. The auditors were particularly focused on traceability and logging practices.\n\nThanks,  \nCISO",
+    "priority": "high",
+    "read": false,
+    "starred": true,
+    "attachments": [],
+    "threadId": "thread-13",
+    "tags": [
+      "urgent",
+      "security",
+      "support"
+    ]
+  },
+  {
+    "id": "email-5",
+    "subject": "🔐 Security Audit Findings – Immediate Actions Required",
+    "from": "Emely_Schroeder@gmail.com",
+    "to": "Dixie_Frami@gmail.com",
+    "cc": "Heaven95@gmail.com",
+    "bcc": "Isabella_Boehm10@gmail.com",
+    "date": "4/5/2025, 2:22:11 PM",
+    "body": "Dear HR,\n\nAfter a six-month review of remote team effectiveness, we’ve updated the hybrid work policy:\n- Mandatory 2 days/week in office starting May 1\n- Fully remote requests subject to manager approval, reviewed quarterly\n- New virtual check-in template (see HR handbook, p.19)\n\nThe new policy aims to balance collaboration and flexibility. Please:\n✅ Roll out comms to team leads by April 10  \n✅ Set up Q&A town hall on April 15  \n✅ Update internal wiki & employee onboarding slides\n\nExpect some pushback — especially from engineering. Be prepared with rationale and survey results.\n\nThanks,  \nHead of People Ops",
+    "priority": "low",
+    "read": true,
+    "starred": false,
+    "attachments": [],
+    "threadId": "thread-11",
+    "tags": [
+      "data",
+      "launch",
+      "strategy",
+      "HR",
+      "infra"
+    ]
+  },
+  {
+    "id": "email-6",
+    "subject": "💼 HR Policy Update – Hybrid Work Guidelines Effective May",
+    "from": "Vincent_Effertz@yahoo.com",
+    "to": "Wyman20@gmail.com",
+    "cc": "Oran_Howe@gmail.com",
+    "bcc": "Douglas91@hotmail.com",
+    "date": "4/6/2025, 12:18:23 AM",
+    "body": "Dear HR,\n\nAfter a six-month review of remote team effectiveness, we’ve updated the hybrid work policy:\n- Mandatory 2 days/week in office starting May 1\n- Fully remote requests subject to manager approval, reviewed quarterly\n- New virtual check-in template (see HR handbook, p.19)\n\nThe new policy aims to balance collaboration and flexibility. Please:\n✅ Roll out comms to team leads by April 10  \n✅ Set up Q&A town hall on April 15  \n✅ Update internal wiki & employee onboarding slides\n\nExpect some pushback — especially from engineering. Be prepared with rationale and survey results.\n\nThanks,  \nHead of People Ops",
+    "priority": "high",
+    "read": true,
+    "starred": true,
+    "attachments": [
+      "contracts-draft.docx"
+    ],
+    "threadId": "thread-6",
+    "tags": [
+      "security",
+      "marketing",
+      "launch",
+      "strategy",
+      "data"
+    ]
+  },
+  {
+    "id": "email-7",
+    "subject": "🛠️ Infrastructure Review – Cloud Cost Optimization Strategies",
+    "from": "Vincent_Powlowski55@yahoo.com",
+    "to": "Sheila4@yahoo.com",
+    "cc": "Taryn.Ledner-Kub46@gmail.com",
+    "bcc": "Joana_Kulas39@yahoo.com",
+    "date": "4/5/2025, 4:28:54 PM",
+    "body": "Dear Team,\n\nFollowing months of development and QA, we are entering the final sprint towards launching AtomMail v2.0. This version includes core AI integrations, improved thread management, and user-personalized smart replies.\n\nHere’s the detailed breakdown of tasks:\n1. Final regression testing to be completed by QA team by April 10.\n2. Marketing assets (launch video, FAQs, press release) to be finalized and reviewed by April 8.\n3. Coordinate with infrastructure team for cloud scaling readiness starting April 12.\n\n🔁 Cross-functional dependencies:\n- Product: Confirm feature flag setup for staggered rollout\n- Support: Prepare updated onboarding docs for new features\n- Legal: Final review of updated terms of service & AI disclaimers\n\nLet’s maintain tight communication in the #v2-rollout channel. Every blocker, no matter how minor, must be flagged immediately.\n\nBest,  \nProduct Launch Coordinator",
+    "priority": "low",
+    "read": true,
+    "starred": true,
+    "attachments": [
+      "q1-report.xlsx"
+    ],
+    "threadId": "thread-10",
+    "tags": [
+      "launch",
+      "data",
+      "support",
+      "marketing",
+      "HR"
+    ]
+  },
+  {
+    "id": "email-8",
+    "subject": "💼 HR Policy Update – Hybrid Work Guidelines Effective May",
+    "from": "Lexi_Rogahn@gmail.com",
+    "to": "Loyce.Oberbrunner10@hotmail.com",
+    "cc": "Tabitha41@gmail.com",
+    "bcc": "Paula.Rolfson@yahoo.com",
+    "date": "4/6/2025, 5:31:05 AM",
+    "body": "Hi Marketing Squad,\n\nThis quarter’s paid campaign outcomes are in — some surprises, some lessons.\n\n🔥 What worked:\n- “Inbox Zero with AI” theme hit home — 34% conversion boost on LinkedIn\n- Mobile-first creatives outperformed desktop by 3.2x on Instagram\n\n🧊 What flopped:\n- A/B test B had higher CTR but low form completion\n- Email nurture drop-off rate jumped to 62% after Day 2\n\n📈 Next steps:\n- Retarget those who clicked but didn’t convert\n- Kill underperforming segments and redirect budget to Lookalike Group 3\n\nLet’s regroup on Tuesday for a retro. Come with creative fixes + bold ideas.\n\nCheers,  \nCMO",
+    "priority": "high",
+    "read": true,
+    "starred": true,
+    "attachments": [],
+    "threadId": "thread-11",
+    "tags": [
+      "launch"
+    ]
+  },
+  {
+    "id": "email-9",
+    "subject": "🧪 A/B Testing Results – AI Summary Feature Experiments",
+    "from": "Selmer5@hotmail.com",
+    "to": "Shana.Kreiger@gmail.com",
+    "cc": "Monica44@hotmail.com",
+    "bcc": "Aurore99@hotmail.com",
+    "date": "4/5/2025, 2:09:07 PM",
+    "body": "Hey Security Team,\n\nThe results from our third-party audit just came in — and there are critical vulnerabilities:\n🔴 High – JWT tokens not rotating as expected after auth expiry\n🟡 Medium – Access logs not being archived past 14 days\n🔵 Low – CSP header misconfigurations on internal tools\n\nWe need immediate resolution before our next ISO re-certification. Assign owners, patch production by April 6, and send sign-off report by April 7.\n\nAlso, update documentation to reflect all changes post-patch. The auditors were particularly focused on traceability and logging practices.\n\nThanks,  \nCISO",
+    "priority": "high",
+    "read": true,
+    "starred": true,
+    "attachments": [
+      "security-audit.zip"
+    ],
+    "threadId": "thread-11",
+    "tags": [
+      "data"
+    ]
+  },
+  {
+    "id": "email-10",
+    "subject": "💰 Investor Relations – Board Meeting Preparation Notes",
+    "from": "Elijah68@hotmail.com",
+    "to": "Dudley39@gmail.com",
+    "cc": "Isaac54@hotmail.com",
+    "bcc": "Russel.Conroy@hotmail.com",
+    "date": "4/5/2025, 4:09:03 PM",
+    "body": "Hello Leadership Team,\n\nThe Q1 BI report reveals key trends across verticals. Notably:\n- 28% MoM growth in user retention, mainly due to the new reply-suggestion engine.\n- Drop in mobile engagement in Asia-Pacific (−12%) likely caused by region-specific UX issues.\n\nAttached, you’ll find:\n📁 insights-q1-report.pdf (Full BI snapshot)\n📁 regression-analysis.xlsx (Filtered by geography & platform)\n\nAction Items:\n- UX team to investigate APAC feedback\n- Sales to adjust forecasts for next quarter\n- Product to schedule roadmap check-in with UX & Dev by mid-month\n\nPlease review ahead of the leadership sync on Thursday.\n\nBest regards,  \nHead of Strategy",
+    "priority": "high",
+    "read": true,
+    "starred": true,
+    "attachments": [
+      "mockups-v2.png"
+    ],
+    "threadId": "thread-13",
+    "tags": [
+      "HR"
+    ]
+  }
+]
