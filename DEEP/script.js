@@ -1,4 +1,7 @@
-const API_BASE = "http://localhost:3000";
+import dotenv from "dotenv";
+
+
+const API_BASE = `http://localhost:${process.env.PORT || 8000}`;
 let selectedEmail = null;
 
 window.onload = () => {
