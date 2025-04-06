@@ -167,6 +167,98 @@ app.post("/reply", async (req, res) => {
     `;
     
     const reply = await callDeepSeek(prompt);
+    let cleanedReply= reply.replace(/^\\boxed{/, "").replace(/}$/, "").trim();
+
+    console.log(reply);
+
+    res.json({
+      email: cleanedReply,
+      meta: { intent, tone, length, recipient, personality },
+      model: "deepseek/deepseek-r1-zero:free",
+      time: new Date().toISOString()
+    });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to generate custom email" });
+  }
+});
+
+
+// // 💬 /reply – Custom Email Writer
+// app.post("/reply", async (req, res) => {
+//   try {
+//     const { intent, tone, length, recipient, personality = "neutral" } = req.body;
+
+//     if (!intent || !tone || !length || !recipient) {
+//       return res.status(400).json({ error: "Missing required fields" });
+//     }
+
+//     const prompt = `
+//     You are an expert email assistant writing on behalf of a busy professional.
+    
+//     ✍️ Task:
+//     Compose an email based on the following inputs.
+    
+//     🧾 Details:
+//     - Length: ${length}
+//     - Tone: ${tone}
+//     - Personality Style: ${personality}
+//     - Recipient: ${recipient}
+//     - Core Intent/Topic: "${intent}"
+    
+//     📌 Instructions:
+//     - Write the full email — include greetings and sign-offs like they are absolutely necessary.
+//     - Ensure the content flows naturally and remains relevant to the intent.
+//     - Avoid fluff, clichés, or made-up facts.
+//     - Reflect the chosen tone and personality in language choice and structure.
+    
+//     Generate the full mail. Be precise, professional, and human-like.
+//     `;
+    
+//     const reply = await callDeepSeek(prompt);
+//     console.log(reply);
+
+//     res.json({
+//       email: reply.trim(),
+//       meta: { intent, tone, length, recipient, personality },
+//       model: "deepseek/deepseek-r1-zero:free",
+//       time: new Date().toISOString()
+//     });
+//   } catch (err) {
+//     res.status(500).json({ error: "Failed to generate custom email" });
+//   }
+// });
+// 💬 /reply – Custom Email Writer
+app.post("/reply", async (req, res) => {
+  try {
+    const { intent, tone, length, recipient, personality = "neutral" } = req.body;
+
+    if (!intent || !tone || !length || !recipient) {
+      return res.status(400).json({ error: "Missing required fields" });
+    }
+
+    const prompt = `
+    You are an expert email assistant writing on behalf of a busy professional.
+    
+    ✍️ Task:
+    Compose an email based on the following inputs.
+    
+    🧾 Details:
+    - Length: ${length}
+    - Tone: ${tone}
+    - Personality Style: ${personality}
+    - Recipient: ${recipient}
+    - Core Intent/Topic: "${intent}"
+    
+    📌 Instructions:
+    - Write the full email — include greetings and sign-offs like they are absolutely necessary.
+    - Ensure the content flows naturally and remains relevant to the intent.
+    - Avoid fluff, clichés, or made-up facts.
+    - Reflect the chosen tone and personality in language choice and structure.
+    
+    Generate the full mail. Be precise, professional, and human-like.
+    `;
+    
+    const reply = await callDeepSeek(prompt);
     console.log(reply);
 
     res.json({
