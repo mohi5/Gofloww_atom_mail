@@ -74,7 +74,7 @@ async function summary() {
     if (!res.ok) throw new Error(`Status ${res.status}`);
 
     const data = await res.json();
-    const summary = data?.email?.trim();
+    const summary = data?.summary?.trim();
 
     if (summary) {
       replyInput.value = summary;
@@ -90,6 +90,15 @@ async function summary() {
 
   enableButton("summarizeBtn");
 }
+
+
+
+
+//---------------------------------------
+
+
+
+
 
 async function generateReply() {
   if (!selectedEmail?.body) return alert("Select an email first.");
