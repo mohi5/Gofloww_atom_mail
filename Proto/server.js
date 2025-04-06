@@ -99,7 +99,7 @@ Only return the raw JSON. Topic: "${chosenTopic}"
   }
 }
 
-// ROUTES
+//   ROUTES
 
 // GET /generate — auto topic email
 app.get('/generate', async (req, res) => {
@@ -186,7 +186,7 @@ Return ONLY the body of the email.
   }
 });
 
-// GET /emails — retrieve stored mails
+//   GET /emails — retrieve stored mails
 app.get('/emails', (req, res) => {
   res.json(mails);
 });
