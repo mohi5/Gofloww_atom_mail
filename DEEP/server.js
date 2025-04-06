@@ -306,7 +306,7 @@ app.get("/test", async (req, res) => {
 // 🏠 Home
 app.get("/", (req, res) => {
   res.setHeader("Content-Type", "text/html");
-  res.send(`<h1>💌 AI Email Assistant (DeepSeek)</h1><ul><li><a href="/emails">/emails</a></li><li><a href="/test">/test</a></li><a href="http://127.0.0.1:5500/Gofloww_atom_mail/Proto/index1.html">http://127.0.0.1:5500/Gofloww_atom_mail/Proto/index1.html</a></ul>`);
+  res.send(`<h1>💌 AI Email Assistant (DeepSeek)</h1><ul><li><a href="/emails">/emails</a></li><li><a href="/test">/test</a></li><li><a href="http://127.0.0.1:5500/Gofloww_atom_mail/DEEP/index.html">http://127.0.0.1:5500/Gofloww_atom_mail/DEEP/index.html</a></li></ul>`);
 });
 
 // 🚀 Start Server
